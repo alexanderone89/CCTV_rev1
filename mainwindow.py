@@ -1,0 +1,155 @@
+
+# Form implementation generated from reading ui file 'mainwindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.7
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QVBoxLayout, QMainWindow
+import sys
+import cv2
+
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(598, 542)
+        self.centralWidget = QtWidgets.QWidget(MainWindow)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.centralWidget.sizePolicy().hasHeightForWidth())
+        self.centralWidget.setSizePolicy(sizePolicy)
+        self.centralWidget.setObjectName("centralWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralWidget)
+        self.gridLayout.setContentsMargins(2, 2, 2, 2)
+        self.gridLayout.setSpacing(6)
+        self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setContentsMargins(2, 2, 2, 2)
+        self.verticalLayout.setSpacing(6)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setContentsMargins(2, 2, 2, 2)
+        self.horizontalLayout.setSpacing(6)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame_2 = QtWidgets.QFrame(self.centralWidget)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout_3.setContentsMargins(2, 2, 2, 2)
+        self.gridLayout_3.setSpacing(6)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.label_1 = QtWidgets.QLabel(self.frame_2)
+        font = QtGui.QFont()
+        font.setFamily("Monospace")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_1.setFont(font)
+        self.label_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_1.setObjectName("label_1")
+        self.gridLayout_3.addWidget(self.label_1, 0, 0, 1, 1)
+        self.horizontalLayout.addWidget(self.frame_2)
+        self.frame_1 = QtWidgets.QFrame(self.centralWidget)
+        self.frame_1.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_1.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_1.setObjectName("frame_1")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_1)
+        self.gridLayout_2.setContentsMargins(2, 2, 2, 2)
+        self.gridLayout_2.setSpacing(6)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label_2 = QtWidgets.QLabel(self.frame_1)
+        font = QtGui.QFont()
+        font.setFamily("Monospace")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.label_2.setLineWidth(1)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
+        self.horizontalLayout.addWidget(self.frame_1)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setContentsMargins(2, 2, 2, 2)
+        self.horizontalLayout_2.setSpacing(6)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_4 = QtWidgets.QFrame(self.centralWidget)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.frame_4)
+        self.gridLayout_4.setContentsMargins(2, 2, 2, 2)
+        self.gridLayout_4.setSpacing(6)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.label_3 = QtWidgets.QLabel(self.frame_4)
+        font = QtGui.QFont()
+        font.setFamily("Monospace")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_4.addWidget(self.label_3, 0, 0, 1, 1)
+        self.horizontalLayout_2.addWidget(self.frame_4)
+        self.frame_3 = QtWidgets.QFrame(self.centralWidget)
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.frame_3)
+        self.gridLayout_5.setContentsMargins(2, 2, 2, 2)
+        self.gridLayout_5.setSpacing(6)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.label_4 = QtWidgets.QLabel(self.frame_3)
+        font = QtGui.QFont()
+        font.setFamily("Monospace")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout_5.addWidget(self.label_4, 0, 0, 1, 1)
+        self.horizontalLayout_2.addWidget(self.frame_3)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralWidget)
+        self.menuBar = QtWidgets.QMenuBar(MainWindow)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 598, 20))
+        self.menuBar.setObjectName("menuBar")
+        MainWindow.setMenuBar(self.menuBar)
+        self.mainToolBar = QtWidgets.QToolBar(MainWindow)
+        self.mainToolBar.setObjectName("mainToolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)
+        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        self.statusBar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusBar)
+
+        self.retranslateUi(MainWindow)
+
+
+        self.showMaximized()
+
+
+
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+
+
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Камеры"))
+        self.label_1.setText(_translate("MainWindow", "Хуйма сигнала-1"))
+        self.label_2.setText(_translate("MainWindow", "Хуйма сигнала-2"))
+        self.label_3.setText(_translate("MainWindow", "Хуйма сигнала-3"))
+        self.label_4.setText(_translate("MainWindow", "Хуйма сигнала-4"))
+
+
